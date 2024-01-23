@@ -489,6 +489,7 @@ def plot_all_stations(map_object, event_stations: List[Tuple[dict, dict]]):
     :param event_stations: a list of dictionary tuples with events and stations
     :type event_stations: List[Tuple[dict, dict]]
     """
+    import cartopy as cp
     stations = chain.from_iterable(
         (_i[1].values() for _i in event_stations if _i[1])
     )
